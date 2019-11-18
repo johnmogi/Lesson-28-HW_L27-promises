@@ -53,6 +53,11 @@ class Employee {
 
   public display(): void {
     document.write(
+`
+First-Name: 
+
+`
+
       "First-Name: " +
         this.firstName +
         `<br/>` +
