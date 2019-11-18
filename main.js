@@ -22,11 +22,17 @@ var Employee = /** @class */ (function () {
         this.adress = adress;
         this.salary = salary;
     }
+    Employee.prototype.socialSecurity = function () {
+        var tenPercent = this.salary / 10;
+        return tenPercent;
+        //    let newPrice = this.price * 0.17
+    };
     Employee.prototype.display = function () {
-        document.write("First Name" + this.firstName + "<br/>"
-            + "Last Name" + this.lastName + "<br/>"
-            + "Adress" + this.adress + "<br/>"
-            + "Salary" + this.salary + "<br/>");
+        document.write("First-Name: " + this.firstName + "<br/>"
+            + "Last-Name: " + this.lastName + "<br/>"
+            + "Adress: " + this.adress + "<br/>"
+            + "Salary: " + this.salary + "$" + "<br/>"
+            + "Social security: " + this.socialSecurity(this.salary) + "$" + "<br/>");
     };
     return Employee;
 }());
@@ -51,6 +57,7 @@ frstEmployee.lastName = "Burns";
 frstEmployee.salary = 999999;
 frstEmployee.adress = "Pardes Hanna";
 frstEmployee.display();
+frstEmployee.socialSecurity(frstEmployee.salary);
 var scndEmployee = new Employee();
 scndEmployee.firstName = "Moana";
 scndEmployee.lastName = "a lot";

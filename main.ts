@@ -36,14 +36,24 @@ public constructor(firstName: string, lastName: string, adress: string, salary: 
     this.salary = salary;
 
 }
+public socialSecurity()  {
+    let tenPercent = this.salary/ 10
+    return tenPercent
+ 
+//    let newPrice = this.price * 0.17
+    
+}
+
 public display() : void {
 document.write(
-    "First Name" + this.firstName + `<br/>`
-   + "Last Name" + this.lastName + `<br/>`
-   + "Adress" + this.adress + `<br/>`
-   + "Salary" + this.salary + `<br/>`
+    "First-Name: " + this.firstName + `<br/>`
+   + "Last-Name: " + this.lastName + `<br/>`
+   + "Adress: " + this.adress + `<br/>`
+   + "Salary: " + this.salary + "$" + `<br/>`
+   + "Social security: " + this.socialSecurity(this.salary) + "$" + `<br/>`
 )
 }
+
 }
 let firstCologne = new Perfume ();
 firstCologne.name = "Eau De JavaScript";
@@ -67,6 +77,7 @@ frstEmployee.lastName = "Burns";
 frstEmployee.salary = 999999;
 frstEmployee.adress = "Pardes Hanna";
 frstEmployee.display()
+frstEmployee.socialSecurity(frstEmployee.salary)
 
 let scndEmployee = new Employee ();
 scndEmployee.firstName = "Moana";
