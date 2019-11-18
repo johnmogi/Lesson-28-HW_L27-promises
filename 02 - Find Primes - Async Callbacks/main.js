@@ -3,7 +3,9 @@ function findPrimes() {
     const max = +prompt("Enter maximum number: ");
     getPrimes(min, max, totalPrimes => console.log(totalPrimes), err => alert(err.message));
 }
-
+function enpty(){
+        let test = x
+                    }
 function getPrimes(min, max, successCallback, errorCallback) {
     setTimeout(() => {
 
