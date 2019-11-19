@@ -11,17 +11,17 @@ function feedArr2() {
 
 function feedArr3() {
     const numArray = null
-    checkArrAverage(numArray, response => alert(response), err => alert("Error: it appears to be null (:" + err));
+    checkArrAverage(numArray, response => alert(response), err => alert(err.message));
 }
 
 function feedArr4() {
     const numArray = "empty Array"
-    checkArrAverage(numArray, response => alert(response), err => alert("Error: it appears to be a string" + err));
+    checkArrAverage(numArray, response => alert(response), err => alert(err.message));
 }
 
 function checkArrAverage(numArray, successCallback, errorCallback) {
     setTimeout(() => {
-        if (numArray.length > 0 || numArray == []) {
+        if (numArray.length > 0) {
             let total = 0;
             for (var i in numArray) {
                 total += numArray[i];
