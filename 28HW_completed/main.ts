@@ -108,3 +108,10 @@ scndEmployee.lastName = "a lot";
 scndEmployee.salary = 666;
 scndEmployee.adress = "know where";
 scndEmployee.display();
+
+let thrdEmployee = new Employee();
+thrdEmployee.firstName = "joakin";
+thrdEmployee.lastName = "Joker";
+thrdEmployee.salary = 151515;
+thrdEmployee.adress = "know where";
+thrdEmployee.display();

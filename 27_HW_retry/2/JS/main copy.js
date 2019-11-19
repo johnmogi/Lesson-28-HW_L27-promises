@@ -7,25 +7,25 @@ $(() => {
             validatePrice(userPrice)
             const vat = 17;
             const total = (userPrice / 100) * (vat + 100);
-            return total
+            alert(total)
         } catch (err) {
-
             alert("retry- use a positive number")
         }
     }
 
-    function validatePrice(userPrice, errorCallback) {
+    function validatePrice(userPrice) {
         if (userPrice < 1) {
             errorCallback({
                 message: "Minimum must be lower than or equal to maximum"
             });
+            // }
+            // if (userPrice == isNaN) {
+            //     errorCallback({
+            //         message: "try again with a number"
+            //     });
+            // }
         }
-        // if (userPrice == isNaN) {
-        //     errorCallback({
-        //         message: "try again with a number"
-        //     });
-        // }
-    }
-    alert(addVat(userPrice))
+        addVat(userPrice)
 
+    }
 });
