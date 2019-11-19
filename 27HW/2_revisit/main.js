@@ -4,7 +4,7 @@ function addVat() {
         alert("error, desired number is too small")
         return false
     }
-    addVatNumber(userPrice, successCallback => successCallback, err => alert("Error: " + err.message));
+    addVatNumber(userPrice, err => alert("Error: " + err.message));
 
 }
 
@@ -12,7 +12,7 @@ function addVatNumber(numberU, successCallback, errorCallback) {
     setTimeout(() => {
         try {
 
-            const percent = (+numberU * 0.17)
+            const percent = (numberU * 0.17)
 
             const n = +numberU + percent
             alert("Total is: " + n)
